@@ -1,0 +1,89 @@
+class op:
+    def __init__(self,n):
+        self.n = n
+        with open(self.n,"w") as f:
+            f.write("""
+India is a beautiful country.
+India is known for its rich culture.
+India has many historical monuments.
+India celebrates many festivals.
+India is famous for its diversity.
+India is located in South Asia.
+India has a strong democracy.
+India is the birthplace of yoga.
+India has many different languages.
+India is famous for delicious food.
+India has a rich history.
+India is known for the Taj Mahal.
+India has the Himalayan mountains.
+India is developing in technology.
+India has a large population.
+India is famous for cricket.
+India has many rivers and forests.
+India celebrates Independence Day proudly.
+India has talented scientists and teachers.
+India is respected around the world.
+India has colorful traditions.
+India is home to many religions.
+India is progressing in space research.
+India teaches unity in diversity.
+India has hardworking people.
+India has many tourist attractions.
+India is famous for traditional clothing.
+India has beautiful villages and cities.
+India is a land of culture and peace.
+India is a proud and great nation.
+Jaipur is known as the Pink City.
+Jaipur is the capital of Rajasthan.
+Jaipur is famous for its palaces.
+Jaipur attracts many tourists every year.
+Jaipur has beautiful forts and temples.
+Jaipur is known for traditional jewelry.
+Jaipur has colorful markets.
+Jaipur is famous for handicrafts.
+Jaipur has rich Rajasthani culture.
+Jaipur is a clean and beautiful city.
+Jaipur is popular for delicious food.
+Jaipur has many historical places.
+Jaipur is one of the major cities of Rajasthan.
+Jaipur is famous for Hawa Mahal.
+Jaipur has grand celebrations during festivals.
+Jaipur is loved by tourists from many countries.
+Jaipur has modern buildings and roads.
+Jaipur is known for its hospitality.
+Jaipur is growing rapidly in education and business.
+Jaipur is a proud city of Rajasthan.
+""")
+    def ct(self):
+        l = input("enter the letter:")
+        with open(self.n,"r") as f:
+            rows = f.readlines()
+            for row in rows:
+                if l in row:
+                    print(row)
+    def vc(self):
+        c=0
+        v=0
+        with open(self.n,"r") as f:
+            r = f.read()
+            for i in r:
+                if i.isalpha():
+                    if i in "aeiouAEIOU":
+                        v+=1
+                    else:
+                        c+=1
+        print(f"the vowels are{v} and consonents are {c}")
+    def rev(self):
+        fil = input("enter the file name:")
+        s = ""
+        with open(self.n,"r") as f:
+            r = f.read()
+            s = s+r[::-1]
+        with open(fil,"w") as f:
+            f.write(s)
+    
+        
+a = op("w.txt")
+#a.ct()
+#a.vc()
+a.rev()
