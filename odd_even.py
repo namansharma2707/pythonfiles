@@ -4,3 +4,5 @@ if oe(n=int(input("enter the no:"))):
     print("odd")
 else:
     print("even")
+    
+print("code executed")
