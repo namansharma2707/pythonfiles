@@ -31,3 +31,4 @@ while True:
     if total == 1:
         print("u lost")
         exit(0)
+print("you lose")
